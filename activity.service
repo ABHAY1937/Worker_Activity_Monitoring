@@ -1,0 +1,14 @@
+[Unit]
+Description=Run Python Script in Conda Env
+After=network.target
+
+[Service]
+ExecStart=/home/abhay/Music/Worker_Activity_Monitoring/script.sh
+WorkingDirectory=/home/abhay/Music/Worker_Activity_Monitoring
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=abhay
+
+[Install]
+WantedBy=multi-user.target
